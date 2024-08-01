@@ -160,7 +160,7 @@ header {
   height: auto;
   position: relative;
   top: 3px;
-  width: 2.3rem;
+  width: 2rem;
 }
 .kuda-hamburger .kuda-hamburger--inner {
   transition-duration: 75ms;
@@ -226,7 +226,7 @@ header {
 }
 .mobile-nav .close-toggle {
   position: absolute;
-  right: 25px;
+  right: 45px;
   top: 24px;
   z-index: 1;
 }
@@ -285,6 +285,7 @@ header {
   border-color: #dfe3ff;
   color: #40196d;
   border-radius: 10px;
+  text-decoration: none;
 }
 .mobile-navigation {
   display: flex;
@@ -983,16 +984,17 @@ main{
 
 /* choose freedom secton style */
 
-.comparison-container {
+.comparison-table-container {
   text-align: center;
   background-color: #ffffff;
-  padding: 4rem;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-radius: 10px;
+  overflow-x: auto;
 }
 
 .freedom-text h2 {
@@ -1004,35 +1006,35 @@ main{
 }
 
 .comparison-table {
-  font-family: "inter";
-  font-size: 19px;
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.comparison-table th,
-.comparison-table td {
-  border: 1px solid #e0e0e0;
-  padding: 20px 20px;
   text-align: left;
-  border-left: none;
-  border-right: none;
-  border-top: none;
 }
-
+.comparison-table th, .comparison-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+}
 .comparison-table th {
-  /* background-color: #f3f4f6; */
-  font-weight: 900;
+  background-color: #f5f5f5;
   color: #40196d;
-  line-height: 24px;
-  font-size: 22px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.comparison-table td {
+  color: #333;
 }
 
-.comparison-table td,
-th {
-  border-left: none; /* Remove left border */
-  border-right: none; /* Remove right border */
+.comparison-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.comparison-table tr td:first-child {
+  font-weight: bold;
+}
+
+.comparison-table tr td:last-child {
+  color: #40196d;
+  font-weight: bold;
 }
 
 .bold {
@@ -1043,7 +1045,6 @@ th {
 .minus {
   display: flex;
   gap: 5px;
-  /* align-items: center; */
 }
 
 .check {
@@ -1056,11 +1057,8 @@ th {
   margin-top: 12.5%;
  }
 
- .mfy-heading{
-  text-align: center;
- }
-
  .mfy-heading h2{
+  text-align: center;
   margin-bottom: 40px;
   font-weight: 900;
   font-size: 36px;
@@ -1072,43 +1070,42 @@ th {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
  }
 
  .mfy-below .card{
   height: 250px;
   display: flex;
   flex-direction: column;
-  -webkit-box-align: baseline;
-  align-items: left;
-  /* -webkit-box-pack: justify; */
+  align-items: baseline;
   justify-content: space-between;
   margin-bottom: 20px;
-  width: calc(25% - 13px);
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, .06);
-    padding: 22px 25px;
+  width: calc(33.33% - 13px);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .06);
+  padding: 22px 25px;
  }
 
- .card .card-icon{
+ /* .card .card-icon{
   margin-bottom: 15px;
- }
+ } */
 
- .card-text{
+ .card .card-text{
   text-align: left;
  }
 
- .card-text .card-heading{
+ .card-text .card-heading p{
     font-family: Mulish;
     font-size: 24px;
     line-height: 30.12px;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
     cursor: pointer;
     font-weight: 900;
     color: #40196d;
  }
 
- .card-text .card-desc{
+ .card .card-text .card-desc{
     font-family: Mulish;
     font-size: 16px;
     font-weight: 400;
@@ -1116,12 +1113,11 @@ th {
     color: #121212;
 }
 
-.learnMore-link{
+.card .learnMore-link{
     cursor: pointer;
     display: inline-flex !important;
     align-items: center;
     color: #40196d;
-    /* font-weight: 700; */
     margin-top: 26px;
     text-decoration: underline;
 }
@@ -1330,8 +1326,9 @@ th {
       align-items: center;
   }
   .header-container {
-      padding-inline: 4rem;
+      padding-inline: 2rem;
   }
+  
   .header-container .navigation,
   .header-container .join-kuda,
   .header-container .sign-in {
@@ -1362,7 +1359,10 @@ th {
     font-size: 14px;
   }
   .header-container {
-      padding-inline: 2rem;
+      padding-inline: 1rem;
+  }
+  .header-container .kuda-logo {
+    min-width: 5rem;
   }
   .container {
       padding-inline: 2rem;
@@ -1373,11 +1373,14 @@ th {
     flex-direction: column;
     align-items: center;
   }
+  /* .hero-section-wrapper{
+    margin-top: 50px;
+  } */
   .hero-section-wrapper,
   .app-preview {
     width: 100%;
     max-width: none;
-    margin: 0;
+    margin: 50px 0px 0px 0px;
     text-align: center;
   }
   .hero-left-main {
@@ -1608,7 +1611,18 @@ th {
     }
 
     /* choose freedom style */
-    .comparison-container {
+    .comparison-table-container {
+      padding: 10px;
+    }
+  
+    .comparison-table th, .comparison-table td {
+      padding: 10px;
+    }
+  
+    .comparison-table th {
+      font-size: 1em;
+    }
+    /* .comparison-container {
       padding: 1rem;
     }
   
@@ -1657,7 +1671,7 @@ th {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
+    } */
   
     /* more of you section style */
     .mfy-below {
