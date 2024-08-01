@@ -852,7 +852,7 @@ main{
 
 /* Marquee style */
 
-.marquee-header {
+/* .marquee-header {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -903,10 +903,10 @@ main{
 .marquee-content {
   display: flex;
   animation: marquee 20s linear infinite;
-}
+} */
 
 /* testimonial section starts here */
-.testimonial {
+/* .testimonial {
   min-width: 450px;
   height: 270px;
   padding: 20px;
@@ -931,6 +931,66 @@ main{
   font-weight: 400;
   color: #000;
   text-align: justify;
+} */
+.testimonials-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonials-section h2 {
+  color: #40196d;
+  margin-bottom: 20px;
+  font-family: Mulish;
+  font-size: 900;
+  font-size: 39px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* padding: 20px; */
+  padding: 22px 25px;
+  margin-left: 20px;
+  max-width: 320px;
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.testimonial-author img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.testimonial-author span {
+  font-weight: bold;
+  color: #40196d;
 }
 
 
@@ -1610,6 +1670,16 @@ main{
       width: 100%;
     }
 
+    .testimonials-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+
     /* choose freedom style */
     .comparison-table-container {
       padding: 10px;
@@ -1622,56 +1692,7 @@ main{
     .comparison-table th {
       font-size: 1em;
     }
-    /* .comparison-container {
-      padding: 1rem;
-    }
-  
-    .comparison-table, .comparison-table thead, .comparison-table tbody, .comparison-table th, .comparison-table td, .comparison-table tr {
-      display: block;
-      width: 100%;
-    }
-  
-    .comparison-table thead tr {
-      display: none;
-    }
-  
-    .comparison-table tr {
-      margin-bottom: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .comparison-table td {
-      text-align: left;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      position: relative;
-      font-size: 14px;
-      line-height: 20px;
-    }
-  
-    .comparison-table td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 0;
-      width: 100%;
-      padding-left: 1rem;
-      font-weight: 700;
-      text-align: left;
-      background-color: #f9f9f9;
-      padding: 5px;
-    }
-  
-    .comparison-table td:last-child::before {
-      padding-bottom: 1rem;
-    }
-  
-    .comparison-table td::before {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    } */
+   
   
     /* more of you section style */
     .mfy-below {
@@ -1709,6 +1730,35 @@ main{
     }
      /* join kuda section style */
     .footer-top{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer-container{
+      padding-right: 60px;
+    }
+
+    .footer-col{
+      margin-top: 20px;
+    }
+
+    .downloadBtns-container{
       flex-wrap: wrap;
     }
+
+    .footer-kuda-info{
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .info-col:first-child{
+      
+        margin-bottom: 10px;
+        width: 100%;
+    
+    }
+    .info-col:not(:last-child) {
+      margin-right: 30px;
+      
+  }
+
 }
